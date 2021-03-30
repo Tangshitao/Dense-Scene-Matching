@@ -1,0 +1,53 @@
+TEST:
+  batch_size: 1
+  workers: 0
+  max_iters: -1
+  eval_pose: True
+  DATASET:
+    type: cambridge
+    base_dir: data/cambridge
+    seq_list_path: ShopFacade/deep_retrieve_full.bin
+    ref_topk: 10
+    tempo_len: 1
+    tempo_interval: 1
+    pad_datasets: False
+    lmdb_data_path: False 
+    overlap_check: False
+    depth_filter_ratio: 0
+    max_overlap_thresh: 0.5
+    min_overlap_thresh: 0.3
+    depth_error_thresh: 0.3
+    check_topk: -1
+    pad_image: True
+    crop: False
+
+MODEL:
+  BACKBONE:
+    type: 'resnet50_fpn'
+    freeze_at: -1
+  TRANSFORM:
+    scale: 1
+    mean: [103.530, 116.280, 123.675]
+    std: [1, 1, 1]
+    train_resize_h: 192
+    train_resize_w: 256
+    test_resize_h: 288
+    test_resize_w: 512
+  HEAD:
+    res_channel_num: 256
+    res_width_expand: 2
+    feat_dim: 256
+    feat_out_dim: 64
+    feat_out_dim2: -1
+    dense_dim: [64, 64, 64, 64, 64]
+  type: lslnet_sort
+  freeze_backbone: False
+  max_displacement: 6
+  topk: 16
+  max_pyramid: 4
+  bottom_up_pretrain: False
+  final_level_global_search: True
+  feat_pretrained_path: data/pretrained/model_final_f10217.pkl
+  model_path: data/cambrdige/shopfacade/model_best.pth #data/DSM_release_model/7scenes/best_model.pth
+LOG:
+  path: log/scannet_train

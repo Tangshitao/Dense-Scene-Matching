@@ -1,0 +1,83 @@
+TRAIN:
+  batch_size: 6 
+  workers: 4
+  model_save_iters: 2000 # save model every 2000 iterations
+  train_iters: 160000 # total training iterations
+  reproj_loss: False # use reprojection error loss
+  reproj_loss_start: False 
+  reproj_loss_scale: 1.6 #
+  base_lr: 0.0001 # learning rate
+  lr_steps1: [40000, 60000, 80000] # learning rate decay schedule
+  lr_steps2: [100000, 120000, 140000]
+  auto_resume: False 
+  reset_optimizer: False
+  DATASET:
+    type: scannet 
+    base_dir: data/scannet
+    seq_list_path: deep_retrieve_full.bin # prepared input label, base_dir+seq_list_path
+    ref_topk: 5 # scene image number
+    tempo_len: 1 # number of query image
+    tempo_interval: 1 # skip query image 
+    pad_datasets: False
+    lmdb_data_path: False #Use lmdb input if there is one.
+    overlap_check: False # check overlap
+    depth_filter_ratio: 0 
+    max_overlap_thresh: 0.5 
+    min_overlap_thresh: 0.3
+    depth_error_thresh: 100000
+    check_topk: -1
+    pad_image: True
+
+TEST:
+  batch_size: 1
+  workers: 0
+  max_iters: -1
+  eval_pose: True
+  DATASET: 
+    type: 7scene
+    base_dir: data/7scenes
+    seq_list_path: stairs/deep_retrieve_full.bin
+    ref_topk: 10
+    tempo_len: 1
+    tempo_interval: 1
+    pad_datasets: False
+    lmdb_data_path: False 
+    overlap_check: False
+    depth_filter_ratio: 0
+    max_overlap_thresh: 0.5
+    min_overlap_thresh: 0.3
+    depth_error_thresh: 0.3
+    check_topk: -1
+    same_refer_img: False
+    pad_image: True
+
+MODEL:
+  BACKBONE:
+    type: 'resnet50_fpn'
+    freeze_at: -1
+  TRANSFORM:
+    scale: 1
+    mean: [103.530, 116.280, 123.675]
+    std: [1, 1, 1]
+    train_resize_h: 192
+    train_resize_w: 256
+    test_resize_h: 384
+    test_resize_w: 512
+  HEAD:
+    res_channel_num: 256
+    res_width_expand: 2
+    feat_dim: 256
+    feat_out_dim: 64
+    feat_out_dim2: -1
+    dense_dim: [64, 64, 64, 64, 64]
+  type: lslnet_sort
+  freeze_backbone: False
+  max_displacement: 6
+  topk: 16 # Top K coordinates selected for regression
+  max_pyramid: 4
+  bottom_up_pretrain: False
+  final_level_global_search: True
+  feat_pretrained_path: data/pretrained/model_final_f10217.pkl #backbone pretrained model
+  model_path: data/DSM_release_model/7scenes/best_model.pth # model to be resumed
+LOG:
+  path: log/scannet_train # log path
