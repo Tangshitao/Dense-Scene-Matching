@@ -46,11 +46,11 @@ If you find this project useful, please cite:
   |[Chess](https://drive.google.com/file/d/18PJHy-B3mcIaGW19GXv5H_RpesGYRg26/view?usp=sharing) |[Fire](https://drive.google.com/file/d/1sJMu8T9W78Lod5Bbei6I5IysumW1GWxc/view?usp=sharing) |[Heads](https://drive.google.com/file/d/1_8cqDvR5XLctt37JyGbbOy49m5pysb5v/view?usp=sharing) |[Office](https://drive.google.com/file/d/1dFvHmDjBWpyxIZNLzZ8JrsJoH6dFyRZm/view?usp=sharing) |[Pumpkin](https://drive.google.com/file/d/1N_5JPi31p9beR4VW7_T8f_131at2RGGN/view?usp=sharing) |[Kitchen](https://drive.google.com/file/d/1qlHoPYUzCyVhcG-GGGDIMFoBi7P_kfIo/view?usp=sharing) |[Stairs](https://drive.google.com/file/d/1xDObFp0fYeyJpEuW2aJKLok46UGOYwR3/view?usp=sharing) |
   |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 
-  For Cambridge landmarks, you can download image files [here](http://mi.eng.cam.ac.uk/projects/relocalisation/), and depths [here](https://heidata.uni-heidelberg.de/api/access/datafile/:persistentId?persistentId=doi:10.11588/data/EGCMUU/7LBIQJ)
+  For Cambridge landmarks, you can download image files [here](http://mi.eng.cam.ac.uk/projects/relocalisation/), and depths [here](https://heidata.uni-heidelberg.de/api/access/datafile/:persistentId?persistentId=doi:10.11588/data/EGCMUU/7LBIQJ).
 
 * Test
   
-  Please refer to configs/7scenes.yaml for detailed explaination of how to set label file path and image file path 
+  Please refer to configs/7scenes.yaml for detailed explaination of how to set label file path and image file path.
   * 7scenes
     ```
     python tools/video_test.py --config configs/7scenes.yaml
