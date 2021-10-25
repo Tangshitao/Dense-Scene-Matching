@@ -39,11 +39,11 @@ If you find this project useful, please cite:
 ### Train and Test
 * Download
 
-  You can download the trained models and label files for [7scenes](https://drive.google.com/file/d/1o26wi6PPB6-KUTiJf7r-xSXTURyxbYTG/view?usp=sharing), [Cambridge](https://drive.google.com/file/d/1vshSXWt6dPG10Qg68yzhmpI_JLWcsjpk/view?usp=sharing), [Scannet](https://drive.google.com/file/d/1PVm67EjqqeHC59t-XqpGRKEr3EgGNzNc/view?usp=sharing).
+  You can download the trained models and label files for [7scenes](https://drive.google.com/file/d/1o26wi6PPB6-KUTiJf7r-xSXTURyxbYTG/view?usp=sharing), [Cambridge](https://drive.google.com/file/d/1vshSXWt6dPG10Qg68yzhmpI_JLWcsjpk/view?usp=sharing), [Scannet](https://drive.google.com/file/d/1jBgz8yShwfiUeaoltHdm7CVLFNL7DINk/view?usp=sharing).
 
   For 7scenes, you can use the prepared data in the following.
 
-  |[Chess](https://drive.google.com/file/d/1zmynOFfUGafJD8cBoPrxNHZxNjZ8SwAF/view?usp=sharing) |[Fire](https://drive.google.com/file/d/1zmynOFfUGafJD8cBoPrxNHZxNjZ8SwAF/view?usp=sharing) |[Heads](https://drive.google.com/file/d/1_BFTMIsFXD0VolJKUnYIq2kXFmrfvpkZ/view?usp=sharing) |[Office](https://drive.google.com/file/d/1T95iRqQvso8ok4PIRcC5YIYHkTj-DlLU/view?usp=sharing) |[Pumpkin](https://drive.google.com/file/d/1l7r0e-WSVE64evHA9h90ogDPUaNqTRxX/view?usp=sharing) |[Kitchen](https://drive.google.com/file/d/1IkhJnn2e9P2Jieq3x20C_ntPxs-Um1xG/view?usp=sharing) |[Stairs](https://drive.google.com/file/d/18u_Cd7kB-XaOEXx80i5MCZd8EtbxWtKD/view?usp=sharing) |
+  |[Chess](https://drive.google.com/file/d/1zmynOFfUGafJD8cBoPrxNHZxNjZ8SwAF/view?usp=sharing) |[Fire](https://drive.google.com/file/d/1DoK2lhtaisNKJG87iaLA07XnKxHSCwd7/view?usp=sharing) |[Heads](https://drive.google.com/file/d/1_BFTMIsFXD0VolJKUnYIq2kXFmrfvpkZ/view?usp=sharing) |[Office](https://drive.google.com/file/d/1T95iRqQvso8ok4PIRcC5YIYHkTj-DlLU/view?usp=sharing) |[Pumpkin](https://drive.google.com/file/d/1l7r0e-WSVE64evHA9h90ogDPUaNqTRxX/view?usp=sharing) |[Kitchen](https://drive.google.com/file/d/1IkhJnn2e9P2Jieq3x20C_ntPxs-Um1xG/view?usp=sharing) |[Stairs](https://drive.google.com/file/d/18u_Cd7kB-XaOEXx80i5MCZd8EtbxWtKD/view?usp=sharing) |
   |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 
   For Cambridge landmarks, you can download image files [here](http://mi.eng.cam.ac.uk/projects/relocalisation/), and depths [here](https://heidata.uni-heidelberg.de/api/access/datafile/:persistentId?persistentId=doi:10.11588/data/EGCMUU/7LBIQJ).
@@ -62,7 +62,7 @@ If you find this project useful, please cite:
 
 * Train
 
-  We use ResNet-FPN pretrained [model](https://drive.google.com/file/d/1RpNR8J9lmI4S3yo5IPGlgMSva0lWBgMw/view?usp=sharing).
+  We use ResNet-FPN pretrained [model](https://drive.google.com/file/d/1XlUdfN9YKcJS_9J-MfNPqAKx69HBDGxr/view?usp=sharing).
   ```
     python tools/train_net.py
   ```
