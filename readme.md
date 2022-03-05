@@ -39,7 +39,7 @@ If you find this project useful, please cite:
 ### Train and Test
 * Download
 
-  You can download the trained models and label files for [7scenes](https://drive.google.com/file/d/174bx6EvKWM4BT6JCsh-uwaJrlRn04eL5/view?usp=sharing), [Cambridge](https://drive.google.com/file/d/1vshSXWt6dPG10Qg68yzhmpI_JLWcsjpk/view?usp=sharing), [Scannet](https://drive.google.com/file/d/1iiFFMy-8MpUjvj3tPCgW6XXQMyeUx6Uq/view?usp=sharing).
+  You can download the trained models and label files for [7scenes](https://drive.google.com/file/d/174bx6EvKWM4BT6JCsh-uwaJrlRn04eL5/view?usp=sharing), [Cambridge](https://drive.google.com/file/d/1ye-DuT_76UpCWZCOx95OHbE6CYpYGkOp/view?usp=sharing), [Scannet](https://drive.google.com/file/d/1iiFFMy-8MpUjvj3tPCgW6XXQMyeUx6Uq/view?usp=sharing).
 
   For 7scenes, you can use the prepared data in the following.
 
